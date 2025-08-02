@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+  *  {box-sizing: border-box;}
+
+  .row {
+    display: flex;
+  }
+
+  .left {
+    flex: 32%;
+    padding: 15px 0;
+  }
+
+  .left h2 {
+    padding-left: 8px;
+  }
+
+  .right {
+    flex: 68%;
+    padding: 15px;
+  }
+
+  #mySearch {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+
+   #myMenu li a:hover {
+    background-color: #eee;
+   }
+
+  </style>
+</head>
+<body>
+
+  <div style="padding-left: 10px;">
+    <h2>Search Menu</h2>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+  </div>
+  
+  
+
+
+  <div class="row">
+    <div class="left" style="background-color: #ffff;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search..." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">PHP</a></li>
+      <li><a href="#">Python</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">SQL</a></li>
+      <li><a href="#">Bootstrap</a></li>
+      <li><a href="#">Node.js</a></li>
+      <li><a href="#">React</a></li>
+      <li><a href="#">MongoDB</a></li>
+      <li><a href="#">Angular</a></li>
+      <li><a href="#">Django</a></li>
+      <li><a href="#">CMS</a></li>
+    </ul>
+    </div>
+    
+    <div class="right" style="background-color: #ddd; margin-left: 15px;">
+      <h2>Page Content</h2>
+    <p> ipsum dolor sit amet consectetur adipisicing elit. Quo voluptates doloribus dolorum consectetur obcaecati labore aliquam rerum aliquid error, asperiores accusantium eius numquam libero est nobis.</p>
+    <p> natus laboriosam, enim ex esse molestias perspiciatis? Voluptatibus, quibusdam. Nostrum, officia explicabo aliquam optio adipisci perferendis cupiditate sequi eveniet dignissimos, unde, facere quaerat fugiat.</p>
+    <p>aliquam optio adipisci perferendis cupiditate sequi eveniet dignissimos, unde, facere quaerat fugiat.</p>
+    <p>perspiciatis? Voluptatibus, quibusdam. Nostrum, officia explicabo aliquam optio adipisci perferendis cupiditate sequi eveniet </p>
+    <p>Quo voluptates doloribus dolorum consectetur obcaecati labore aliquam rerum aliquid error, asperiores accusantium eius numquam</p>
+    <p>enim ex esse molestias perspiciatis? Voluptatibus, quibusdam. Nostrum, officia explicabo aliquam optio adipisci perferendis</p>
+    <p>consectetur adipisicing elit. Distinctio minima possimus sed, atque odio cupiditate consectetur? Voluptas magnam id fugit ducimus illo dicta voluptatum ratione optio  expedita  atque nam provident? Veritatis earum, facere iusto illum in id.</p>
+    <p>praesentium vitae ex eum quod cumque tempora enim nihil voluptatibus sed. Repudiandae, labore. Accusantium deleniti minima at enim repellat, animi illum dolores maiores numquam  </p>
+    <p>sunt tenetur sed cupiditate? Minus eum vitae ullam nostrum molestias delectus sequi ex! Voluptatum praesentium nostrum</p>
+    <p>dolores odio harum natus, quisquam eum eos magni! Aut, aspernatur totam voluptatibus, dolorum animi tenetur dolore dolorem dignissimos voluptas iusto voluptate accusantium</p>
+    <p>saepe laborum, reiciendis hic eligendi quisquam exercitationem eos! Deleniti numquam tempore quibusdam nesciunt repudiandae illo qui nostrum minima nulla. Iure, nobis. Culpa hic suscipit doloribus est temporibus fugit </p>
+    <p>odit debitis veniam dignissimos ab  expedita cupiditate nulla sunt exercitationem, ipsum laudantium reprehenderit at nisi unde ratione? Nulla ipsa numquam</p>
+    <p>laudantium nihil perferendis culpa error et eveniet voluptatum amet magni nesciunt iure at rem voluptatem optio. Laborum inventore odit excepturi quia molestias vitae quibusdam</p>
+    <p>fugit impedit iste minus ipsam eos aspernatur, laudantium atque. Delectus autem molestiae maiores cupiditate laborum, illum repellat quod nemo corrupti placeat, enim eos aliquid ratione sint minima quas sapiente</p>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+      let input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+  </script>
+
+
+
+
+
+
+</body>
+</html>
