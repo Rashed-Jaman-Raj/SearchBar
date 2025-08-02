@@ -7,6 +7,11 @@
   <style>
     body {
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 1100px;
+  margin: 2rem auto;
+  border: 0.01px solid gray;
+  border-radius: 6px;
+  box-shadow: 0 0 10px lightgray;
   }
 
   *  {box-sizing: border-box;}
@@ -53,6 +58,13 @@
     background-color: #eee;
    }
 
+   @media (250px <= width <= 768px) {
+    body {
+      margin: 0.7rem;
+    }
+   }
+    
+   
   </style>
 </head>
 <body>
@@ -62,9 +74,6 @@
   <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
   </div>
   
-  
-
-
   <div class="row">
     <div class="left" style="background-color: #ffff;">
     <h2>Menu</h2>
@@ -122,13 +131,8 @@
         }
       }
     }
-
   </script>
 
-
-
-
-
-
 </body>
+
 </html>
